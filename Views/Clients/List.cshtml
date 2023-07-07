@@ -1,0 +1,12 @@
+﻿@{
+    foreach(var Client in Model.allClients) {
+    <div>
+        <h5>@Client.middleName @Client.firstName @Client.lastName</h5>
+        <date>Дата рождения: @Client.birthdate</date>
+    </div>
+    }
+}
+
+
+
+
