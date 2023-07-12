@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U01uZ/ct5wSYkGe6CT8B0gCJajHP6BROkY9DIor9QKPWk1F031TQ+TLlDPeltJd+REVUWH6CsbukHAoqey3rDQ==",
+  "dgSpecHash": "cNVDHjoYDJ/yQxhp4uWi6iBOGVKZXG4uJQoaM0gAmQdLj0qWfdTwYLIigAUVL5IMSXqE72SHLDdEsDUaNedzng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Роман\\source\\repos\\CRM_System\\CRM_System\\CRM_System.csproj",
+  "projectFilePath": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Роман\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Роман\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

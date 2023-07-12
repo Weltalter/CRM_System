@@ -24,8 +24,8 @@ namespace CRM_System {
 
         public void ConfigureServices(IServiceCollection services) {
             services.AddDbContext<DBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IClients, ClientRepository>();
-            services.AddTransient<IOrders, OrderRepository>();
+            services.AddTransient<IClients, MockClients>();
+            services.AddTransient<IOrders, MockOrder>();
             services.AddMvc();
 
         }

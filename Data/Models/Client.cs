@@ -10,6 +10,6 @@ namespace CRM_System.Data.Models {
         public string middleName { set; get; }
         public string lastName { set; get; }
         public DateTime birthdate { set; get; }
-        public List<Order> Orders { set; get; }
+        public virtual List<Order> Orders { set; get; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Роман\\source\\repos\\CRM_System\\CRM_System\\CRM_System.csproj": {}
+    "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Роман\\source\\repos\\CRM_System\\CRM_System\\CRM_System.csproj": {
+    "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Роман\\source\\repos\\CRM_System\\CRM_System\\CRM_System.csproj",
+        "projectUniqueName": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj",
         "projectName": "CRM_System",
-        "projectPath": "C:\\Users\\Роман\\source\\repos\\CRM_System\\CRM_System\\CRM_System.csproj",
+        "projectPath": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj",
         "packagesPath": "C:\\Users\\Роман\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Роман\\source\\repos\\CRM_System\\CRM_System\\obj\\",
+        "outputPath": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
