@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cNVDHjoYDJ/yQxhp4uWi6iBOGVKZXG4uJQoaM0gAmQdLj0qWfdTwYLIigAUVL5IMSXqE72SHLDdEsDUaNedzng==",
+  "dgSpecHash": "OFbQdhCcx2C+qo6JT3pmvXLaH2o4TbmWNz+NlPxeW85fo4mUcjx42K1geOAh9UJ5nJgfyBpFvp252RdUU4TJrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Роман\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Роман\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
-    "C:\\Users\\Роман\\.nuget\\packages\\bootstrap\\5.3.0\\bootstrap.5.3.0.nupkg.sha512",
     "C:\\Users\\Роман\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Роман\\.nuget\\packages\\json\\1.0.1\\json.1.0.1.nupkg.sha512",
     "C:\\Users\\Роман\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.9\\microsoft.aspnet.mvc.5.2.9.nupkg.sha512",
