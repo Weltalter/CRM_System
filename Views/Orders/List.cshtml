@@ -1,7 +1,27 @@
-﻿@{
-    foreach (var Order in Model.allOrders) {
-        <div>
-            <h5>@Order.desc</h5>
-        </div>
-    }
-}
+﻿<table>
+    <caption style="background-color:white">Список заказов</caption>
+
+    <colgroup>
+        <col span="1" style="background-color:lightsteelblue"/>
+    </colgroup>
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ID клиента</th>
+            <th width="300px">Описание</th>
+            <th>Дата заказа</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            foreach(Order Order in Model.allOrders) {
+                <tr>
+                    @Html.Partial("_SampleOutputOrder", Order)
+                </tr>
+            }
+        }
+    </tbody>
+</table>

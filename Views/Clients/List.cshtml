@@ -5,29 +5,25 @@
         <col span="1" style="background-color:lightsteelblue"/>
     </colgroup>
 
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Фамилия</th>
-                <th>Имя</th>
-                <th>Отчество</th>
-                <th>Дата рождения</th>
-            </tr>
-        </thead>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Дата рождения</th>
+        </tr>
+    </thead>
 
-        <tbody>
-            @{
-                foreach(var Client in Model.allClients) {
+    <tbody>
+        @{
+            foreach(Client Client in Model.allClients) {
                 <tr>
-                    <td>@Client.clientID</td>
-                    <td>@Client.middleName</td>
-                    <td>@Client.firstName</td>
-                    <td>@Client.lastName</td>
-                    <td><date>@Client.birthdate</date></td>
+                    @Html.Partial("_SampleOutputClient", Client)
                 </tr>
-                }
             }
-        </tbody>
+        }
+    </tbody>
 </table>
 
 
