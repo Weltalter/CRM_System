@@ -37,7 +37,7 @@ namespace CRM_System {
 
             app.UseRouting();
             app.UseEndpoints(endpoints => {
-                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
 
             using (var scope = app.ApplicationServices.CreateScope()) {

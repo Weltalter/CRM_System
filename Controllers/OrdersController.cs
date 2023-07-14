@@ -16,7 +16,7 @@ namespace CRM_System.Controllers {
 
         public ViewResult List() {
             ViewBag.Title = "Заказы";
-            OrdersListViewModel obj = new OrdersListViewModel();
+            OrdersViewModel obj = new OrdersViewModel();
             obj.allOrders = _allOrders.Orders;
             return View(obj);
         }
