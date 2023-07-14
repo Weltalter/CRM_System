@@ -8,12 +8,12 @@ using System.Linq;
 
 namespace CRM_System.Data {
     public class DBObject {
-        public static void Initial(DBContent _content) {
-            if(!_content.Client.Any()) {
+        public static void Initial (DBContent _content) {
+            if (!_content.Client.Any()) {
                 _content.Client.AddRange(Clients.Values);
             }
 
-            if(!_content.Order.Any()) {
+            if (!_content.Order.Any()) {
                 _content.Order.AddRange(Orders.Values);
             }
 
@@ -44,8 +44,23 @@ namespace CRM_System.Data {
             }
         }
 
-
-
+        public static void AddClient (DBContent _content, Client _newClient) {
+            _clients.Add(_newClient.clientID.ToString() +
+                         _newClient.middleName[0].ToString() +
+                         _newClient.firstName[0].ToString() +
+                         _newClient.lastName[0].ToString(), _newClient);
+            _content.Client.Add(_newClient);
+            _content.SaveChanges();
+        }
+        public static void AddOrder (DBContent _content, Order _newOrder) {
+            _orders.Add(_newOrder.orderID.ToString() +
+                        "--" +
+                        _newOrder.clientID.ToString() +
+                        "--" +
+                        _newOrder.orderDate.ToString(), _newOrder);
+            _content.Order.Add(_newOrder);
+            _content.SaveChanges();
+        }
 
 
 

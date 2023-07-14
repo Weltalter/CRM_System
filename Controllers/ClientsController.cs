@@ -16,8 +16,16 @@ namespace CRM_System.Controllers {
 
         public ViewResult List() {
             ViewBag.Title = "Клиенты";
-            ClientsListViewModel obj = new ClientsListViewModel();
+            ClientsViewModel obj = new ClientsViewModel();
             obj.allClients = _allClients.Clients;
+
+            return View(obj);
+        }
+        public ViewResult OrderList() {
+            ViewBag.Title = "Клиенты";
+            ClientsViewModel obj = new ClientsViewModel();
+            obj.sortClients = _allClients.Clients.OrderBy(c => c.clientID);
+
             return View(obj);
         }
 

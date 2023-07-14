@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace CRM_System.ViewModels {
-    public class ClientsListViewModel {
+    public class ClientsViewModel {
         public IEnumerable<Client> allClients { set; get; }
-
+        public IEnumerable<Client> sortClients { set; get; }
 
 
     }

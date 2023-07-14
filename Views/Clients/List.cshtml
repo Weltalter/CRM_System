@@ -1,11 +1,35 @@
-﻿@{
-    foreach(var Client in Model.allClients) {
-    <div>
-        <h5>@Client.middleName @Client.firstName @Client.lastName</h5>
-        <date>Дата рождения: @Client.birthdate</date>
-    </div>
-    }
-}
+﻿<table>
+    <caption style="background-color:white">Список клиентов</caption>
+
+    <colgroup>
+        <col span="1" style="background-color:lightsteelblue"/>
+    </colgroup>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+                <th>Дата рождения</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                foreach(var Client in Model.allClients) {
+                <tr>
+                    <td>@Client.clientID</td>
+                    <td>@Client.middleName</td>
+                    <td>@Client.firstName</td>
+                    <td>@Client.lastName</td>
+                    <td><date>@Client.birthdate</date></td>
+                </tr>
+                }
+            }
+        </tbody>
+</table>
+
 
 
 
