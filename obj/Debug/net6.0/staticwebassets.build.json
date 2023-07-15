@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wPZ3JCBXZ/QnFUPXS8wIknZOQvLmhYrIlruts58Ekzg=",
+  "Hash": "Fdn0cWuaA7U7NhRXYMR06IDn88EDxh3GjYvtEMK9Hck=",
   "Source": "CRM_System",
   "BasePath": "_content/CRM_System",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\css\\StyleSheet.css",
+      "SourceId": "CRM_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "BasePath": "_content/CRM_System",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
+    },
     {
       "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\1.png",
       "SourceId": "CRM_System",
@@ -49,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\Scripts.js",
+      "SourceId": "CRM_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "BasePath": "_content/CRM_System",
+      "RelativePath": "js/Scripts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Scripts.js"
     }
   ]
 }

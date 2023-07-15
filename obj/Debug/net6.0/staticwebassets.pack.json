@@ -1,12 +1,20 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
       "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\1.png",
       "PackagePath": "staticwebassets\\img\\1.png"
     },
     {
       "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\2.png",
       "PackagePath": "staticwebassets\\img\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\Scripts.js",
+      "PackagePath": "staticwebassets\\js\\Scripts.js"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CRM_System.Microsoft.AspNetCore.StaticWebAssets.props",

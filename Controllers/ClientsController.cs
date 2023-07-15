@@ -21,6 +21,24 @@ namespace CRM_System.Controllers {
 
             return View(obj);
         }
+        public ViewResult AddRecord() {
+            ViewBag.Title = "Добавить клиента";
+
+            return View();
+        }
+        public ViewResult ChangeRecord() {
+            ViewBag.Title = "Изменить клиента";
+
+            return View();
+        }
+        public ViewResult DeleteRecord() {
+            ViewBag.Title = "Удалить клиента";
+
+            return View();
+        }
+
+
+
         public ViewResult OrderList() {
             ViewBag.Title = "Клиенты";
             ClientsViewModel obj = new ClientsViewModel();
