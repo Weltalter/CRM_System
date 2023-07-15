@@ -59,12 +59,6 @@
             border: 1px solid grey;
         }
 
-        h1 {
-            margin: 0; /* Убираем отступы */
-
-            font-size: 42px; /* Размер шрифта заголовка шапки */
-            color: #6A5ACD; /* Цвет текста заголовка шапки */
-        }
         h2 {
             margin-top: 0; /* Убираем отступ сверху */
         }
@@ -73,7 +67,9 @@
             background: #293133; /* Цвет фона шапки */
             border-radius: 0 0 10px 10px; /* Скругление углов */
 
-            padding: 30px 0 30px 100px; /* Поля вокруг текста */
+            font-size: 42px; /* Размер шрифта заголовка шапки */
+            color: #6A5ACD; /* Цвет текста заголовка шапки */
+            padding: 10px 10px 5px 10px; /* Поля вокруг текста */
         }
         .sidebar {
             background: #C3BEFE;
@@ -111,7 +107,10 @@
 </head>
 <body>
     <div class="header">
-        <h1>CRM System</h1>
+        <a href="/Home/Index">
+            <img src="~/img/2.png"
+                 height="100">
+        </a>
     </div>
     
     <div class="sidebar">

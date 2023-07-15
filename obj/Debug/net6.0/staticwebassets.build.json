@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uxvpiC1Y5BVXoPzpM2u7uXUO/1/te/ld0G3lyTfC2Y0=",
+  "Hash": "wPZ3JCBXZ/QnFUPXS8wIknZOQvLmhYrIlruts58Ekzg=",
   "Source": "CRM_System",
   "BasePath": "_content/CRM_System",
   "Mode": "Default",
@@ -15,5 +15,40 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\1.png",
+      "SourceId": "CRM_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "BasePath": "_content/CRM_System",
+      "RelativePath": "img/1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\2.png",
+      "SourceId": "CRM_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "BasePath": "_content/CRM_System",
+      "RelativePath": "img/2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\2.png"
+    }
+  ]
 }
