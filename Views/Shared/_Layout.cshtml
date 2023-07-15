@@ -17,28 +17,83 @@
         }
 
 
-        a:link {
+        a.sidebarLink:link {
             text-decoration: none;
             font-weight: 700;
             color: #000;
         }
-        a:visited {
+        a.sidebarLink:visited {
             text-decoration: none;
             font-weight: 700;
             color: #000;
         }
-        a:hover {
+        a.sidebarLink:hover {
             font-size: 18px;
             text-decoration: none;
             font-weight: 700;
             color: #8E3EEA;
         }
-        a:active {
+        a.sidebarLink:active {
             font-size: 18px;
             text-decoration: none;
             font-weight: 700;
             color: #40057F;
         }
+
+        a.dbLink:link {
+            display: block;
+            width: 100px;
+            height: 20px;
+            background: #F5F5F5;
+            margin: 10px;
+
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            color: #000;
+        }
+        a.dbLink:visited {
+            display: block;
+            width: 100px;
+            height: 20px;
+            background: #F5F5F5;
+            margin: 10px;
+
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            color: #000;
+        }
+        a.dbLink:hover {
+            display: block;
+            width: 100px;
+            height: 20px;
+            background: #E8E8E8;
+            margin: 10px;
+
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            color: #000;
+        }
+        a.dbLink:active {
+            display: block;
+            width: 100px;
+            height: 20px;
+            background: #E0E0E0;
+            margin: 10px;
+
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            color: #000;
+        }
+
+
 
         table {
             border: 1px solid grey;
@@ -117,22 +172,22 @@
     
     <div class="sidebar">
         <p>
-            <a href="/Home/Index">
+            <a class="sidebarLink" href="/Home/Index">
                 Главная
             </a>
         </p>
         <p>
-            <a href="/Clients/List">
+            <a class="sidebarLink" href="/Clients/List">
                 Клиенты
             </a>
         </p>
         <p>
-            <a href="/Orders/List">
+            <a class="sidebarLink" href="/Orders/List">
                 Заказы
             </a>
         </p>
         <p>
-            <a href="/Contacts/List">
+            <a class="sidebarLink" href="/Contacts/List">
                 Контакты
             </a>
         </p>
