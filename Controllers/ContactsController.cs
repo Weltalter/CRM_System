@@ -9,7 +9,7 @@ namespace CRM_System.Controllers {
 
 
 
-        public ViewResult Index() {
+        public ViewResult List() {
             ViewBag.Title = "Контакты";
             ContactsViewModel obj = new ContactsViewModel();
             obj.allContacts = new List<Contact> {

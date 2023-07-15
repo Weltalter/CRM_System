@@ -1,4 +1,7 @@
-﻿<div>
+﻿<div style="background: #DFEFFB;
+            border: 1px solid grey;
+            height: max-content;
+            padding: 10px;">
     @{
         foreach (Contact Contact in Model.allContacts) {
             @Html.Partial("_SampleOutputContact", Contact)
@@ -6,11 +9,3 @@
         }
     }
 </div>
-
-<!--
-     style="background: #293133;
-            border: 1px solid grey;
-            margin: 10px 5px 40px 20%;
-            height: max-content;
-            padding: 10px;"
--->
