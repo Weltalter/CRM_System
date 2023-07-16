@@ -1,1 +1,41 @@
-﻿
+﻿<form action="#" method="post" enctype="multipart/form-data">
+    <div style="font-weight: 700;
+                font-size: 16px;
+                margin: 10px">
+        <p>
+            Заполните форму, чтобы изменить существующую запись заказа.
+        </p>
+    </div>
+    <div style="font-weight: 700;
+                margin: 10px">
+        Введите ID заказа, данные которого вы хотите изменить.
+    </div>
+    <div>
+        <input Placeholder="ID" tabindex="1" name="OrderID" type="text" />
+    </div>
+    <div>
+        <p>
+            <input Placeholder="ID заказчика" tabindex="2" name="ClientID" type="text" />
+        </p>
+    </div>
+    <div>
+        <p>
+            <input Placeholder="Описание..." tabindex="3" name="Desc" type="text" />
+        </p>
+    </div>
+    <div style="font-weight: 700">
+        Дата заказа
+    </div>
+    <div>
+        <input tabindex="4" name="OrderDate" type="date" />
+    </div>
+    <div>
+        <p>
+            <input Placeholder="Цена заказа" tabindex="5" name="Price" type="text" />
+        </p>
+    </div>
+    <div>
+        <button tabindex="6" type="submit" style="float: left">Изменить</button>
+        <button tabindex="7" type="reset">Очистить</button>
+    </div>
+</form>

@@ -95,9 +95,12 @@ form {
     border: 2px solid #333;
     border-radius: 10px;
     margin: 0 500px 0 100px;
+    padding: 10px;
 }
 
 input {
+    vertical-align: text-top;
+    text-align: left;
     font-size: 16px;
 }
 
@@ -176,7 +179,6 @@ button:active {
     font-weight: 700;
     color: #fff;
 }
-
 
 
 
