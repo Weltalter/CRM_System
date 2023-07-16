@@ -36,6 +36,8 @@ a.dbLink:visited,
 a.dbLink:hover,
 a.dbLink:active {
     display: block;
+    border: 2px solid #333;
+    border-radius: 10px;
     width: 100px;
     height: 20px;
     margin: 10px;
@@ -85,6 +87,47 @@ h2 {
     margin-top: 0; /* Убираем отступ сверху */
 }
 
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background: #CEC9FD;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin: 0 500px 0 100px;
+}
+
+input {
+    font-size: 16px;
+}
+
+button,
+button:hover,
+button:active {
+    display: block;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: #293133;
+}
+
+button {
+    background: #C3BEFE;
+}
+button:hover {
+    background: #B6B1FC;
+}
+button:active {
+    background: #9189FA;
+}
+
+
 .header {
     background: #293133; /* Цвет фона шапки */
     border-radius: 0 0 10px 10px; /* Скругление углов */
@@ -111,7 +154,7 @@ h2 {
 }
 
 .content {
-    margin: 10px 10% 5px 20%; /* Значения отступа от левого блока */
+    margin: 10px 20px 5px 20%; /* Значения отступа от левого блока */
     height: max-content;
     padding: 5px; /* Поля внутри блока */
 }
@@ -133,6 +176,15 @@ h2 {
     font-weight: 700;
     color: #fff;
 }
+
+
+
+
+
+
+
+
+
 
 
 
