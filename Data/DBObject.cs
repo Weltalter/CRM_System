@@ -81,7 +81,51 @@ namespace CRM_System.Data {
             _content.Order.Remove(_removeOrder);
             _content.SaveChanges();
         }
+        public static void ChangeClient(DBContent _content, Client _newClient)
+        {
+            Client _changeClient = _content.Client
+               .Where(o => o.clientID == _newClient.clientID)
+               .FirstOrDefault();
 
+            if (_changeClient != null)
+            {
+                    _changeClient.firstName = _newClient.firstName;
+                    _changeClient.middleName = _newClient.middleName;
+                    _changeClient.lastName = _newClient.lastName;
+                    _changeClient.birthdate = _newClient.birthdate;        
+            }
+            _content.SaveChanges();
+        }
+        public static void ChangeOrder(DBContent _content, Order _newOrder)
+        {
+            Order _changeOrder = _content.Order
+               .Where(o => o.orderID == _newOrder.orderID)
+               .FirstOrDefault();
 
+            if (_changeOrder != null)
+            {     
+                _changeOrder.clientID = _newOrder.clientID;
+                _changeOrder.desc = _newOrder.desc;
+                _changeOrder.orderDate = _newOrder.orderDate;
+                _changeOrder.price = _newOrder.price;
+            }
+
+            _content.SaveChanges();
+        }
+
+        public static bool IsTableExist(DBContent _content, int Id, int Table)
+        {
+            bool isTableExists = false;
+            if (Table == 1)
+            {
+                isTableExists = _content.Client.Any(c => c.clientID == Id);
+            }
+            else if (Table == 2)
+             {
+                isTableExists = _content.Order.Any(c => c.orderID == Id);
+            }
+
+            return isTableExists;
+        }
     }
 }

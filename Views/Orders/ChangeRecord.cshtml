@@ -1,4 +1,4 @@
-﻿<form action="#" method="post" enctype="multipart/form-data">
+﻿<form action="#" id="ChangeOrder" method="post" enctype="multipart/form-data">
     <div style="font-weight: 700;
                 font-size: 16px;
                 margin: 10px">
@@ -11,31 +11,134 @@
         Введите ID заказа, данные которого вы хотите изменить.
     </div>
     <div>
-        <input Placeholder="ID" tabindex="1" name="OrderID" type="text" />
+        <input Placeholder="ID заказа" tabindex="1" name="OrderID" type="text" class="form_input _req _ID" />
     </div>
     <div>
         <p>
-            <input Placeholder="ID заказчика" tabindex="2" name="ClientID" type="text" />
+            <input Placeholder="ID клиента" tabindex="2" name="ClientID" type="text" class="form_input _req _ID" />
         </p>
     </div>
     <div>
         <p>
-            <input Placeholder="Описание..." tabindex="3" name="Desc" type="text" />
+            <input Placeholder="Описание" tabindex="3" name="Describtion" type="text" class="form_input _req" />
+        </p>
+    </div>
+    <div>
+        <p>
+            <input Placeholder="Цена заказа" tabindex="5" name="Price" type="text" class="form_input _req _ID" />
         </p>
     </div>
     <div style="font-weight: 700">
         Дата заказа
     </div>
     <div>
-        <input tabindex="4" name="OrderDate" type="date" />
-    </div>
-    <div>
-        <p>
-            <input Placeholder="Цена заказа" tabindex="5" name="Price" type="text" />
-        </p>
-    </div>
+        <input tabindex="4" name="OrderDate" type="date" class="form_input _req" />
+    </div>    
     <div>
         <button tabindex="6" type="submit" style="float: left">Изменить</button>
         <button tabindex="7" type="reset">Очистить</button>
     </div>
 </form>
+
+<script>
+
+    const form = document.getElementById('ChangeOrder');
+
+    const orderIDInput = document.querySelector('input[name="OrderID"]');
+    const clientIDInput = document.querySelector('input[name="ClientID"]');
+    const describtionInput = document.querySelector('input[name="Describtion"]');
+    const priceInput = document.querySelector('input[name="Price"]');
+    const orderDateInput = document.querySelector('input[name="OrderDate"]');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const orderIDScript = orderIDInput.value;
+        const clientIDScript = clientIDInput.value;
+        const describtionScript = describtionInput.value;
+        const priceScript = priceInput.value;
+        const orderDateScript = orderDateInput.value;
+
+        console.log('ID заказа:', orderIDScript);
+        console.log('ID клиента:', clientIDScript);
+        console.log('Описание:', describtionScript);
+        console.log('Цена:', priceScript);
+        console.log('Дата заказа:', orderDateScript);
+
+        const order = {
+            orderID: orderIDScript,
+            clientID: clientIDScript,
+            desc: describtionScript,
+            price: priceScript,
+            orderDate: orderDateScript
+        };
+
+        let error = formValidate(form);
+
+        if (error === 0) {
+            fetch('/JScript/ChangeOrder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(order)
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        return response.json().then((error) => {
+                            throw new Error(error.error);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    alert('Заказ успешно изменен')
+                    console.log('Заказ успешно изменен:');
+                    console.log(data);
+                    form.reset();
+                })
+                .catch(error => {
+                    alert(error)
+                    console.log('Ошибка при изменении заказа:');
+                    console.error(error);
+                });
+        } else {
+            alert('Заполните обязательные поля');
+        }
+
+        function formValidate(form) {
+            let error = 0;
+            let formReq = document.querySelectorAll('._req');
+
+            for (let index = 0; index < formReq.length; index++) {
+                const input = formReq[index];
+                formRemoveError(input);
+                
+                if (input.classList.contains('_ID')) {
+                    if (numTest(input)) {
+                        formAddError(input);
+                        error++;
+                    }
+                } else {
+                    if (input.value === '') {
+                        formAddError(input);
+                        error++;
+                    }
+                }
+            }
+            return error;
+        }
+
+        function formAddError(input) {
+            input.parentElement.classList.add('_error');
+            input.classList.add('_error');
+        }
+        function formRemoveError(input) {
+            input.parentElement.classList.remove('_error');
+            input.classList.remove('_error');
+        }
+        function numTest(input) {
+            return !/^[0-9]+$/.test(input.value);
+        }
+    });
+</script>

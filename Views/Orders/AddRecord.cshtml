@@ -8,24 +8,24 @@
     </div>
     <div>
         <p>
-            <input Placeholder="ID заказчика" tabindex="1" name="ClientID" type="text" />
+            <input Placeholder="ID заказчика" tabindex="1" name="ClientID" type="text" class="form_input _req _num" />
         </p>
     </div>
     <div>
         <p>
-            <input Placeholder="Описание" tabindex="2" name="Describtion" type="text" />
+            <input Placeholder="Описание" tabindex="2" name="Describtion" type="text" class="form_input _req"/>
         </p>
     </div>
     <div>
         <p>
-            <input Placeholder="Цена заказа" tabindex="3" name="Price" type="text" />
+            <input Placeholder="Цена заказа" tabindex="3" name="Price" type="text" class="form_input _req _num" />
         </p>
     </div>
     <div style="font-weight: 700">
         Дата заказа
     </div>
     <div>
-        <input tabindex="4" name="OrderDate" type="date" />
+        <input tabindex="4" name="OrderDate" type="date" class="form_input _req"/>
     </div>
     <div>
         <button tabindex="5" type="submit" style="float: left">Добавить</button>
@@ -51,10 +51,10 @@
         const orderDateScript = orderDateInput.value;
 
 
-        console.log('Фамилия:', clientIDScript);
-        console.log('Имя:', describtionScript);
-        console.log('Отчество:', priceScript);
-        console.log('Дата рождения:', orderDateScript);
+        console.log('ID клиента:', clientIDScript);
+        console.log('Описание:', describtionScript);
+        console.log('Цена:', priceScript);
+        console.log('Дата заказа:', orderDateScript);
 
         const order = {
             clientID: clientIDScript,
@@ -63,21 +63,72 @@
             orderDate: orderDateScript
         };
 
-        fetch('/JScript/AddOrder', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(order)
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Успешно добавлен заказ:');
-                console.log(data);
+        let error = formValidate(form);
+
+        if (error === 0) {
+            fetch('/JScript/AddOrder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(order)
             })
-            .catch(error => {
-                console.log('Ошибка при добавлении заказа:');
-                console.error(error);
-            });
+                .then((response) => {
+                    if (!response.ok) {
+                        return response.json().then((error) => {
+                            throw new Error(error.error);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    alert('Заказ успешно добавлен');
+                    console.log('Заказ успешно добавлен:');
+                    console.log(data);
+                    form.reset();
+                })
+                .catch(error => {
+                        alert(error);
+                        console.log('Ошибка при добавлении заказа:', error);                                        
+                });
+        } else {
+            alert('Заполните обязательные поля');
+        }
+
+        function formValidate(form) {
+            let error = 0;
+            let formReq = document.querySelectorAll('._req');
+
+            for (let index = 0; index < formReq.length; index++) {
+                const input = formReq[index];
+                formRemoveError(input);
+
+                if (input.classList.contains('_num')) {
+                    if (numTest(input)) {
+                        formAddError(input);
+                        error++;
+                    }
+                } else {
+                    if (input.value === '') {
+                        formAddError(input);
+                        error++;
+                    }
+                }
+            }
+            return error;
+        }
+
+        function formAddError(input) {
+            input.parentElement.classList.add('_error');
+            input.classList.add('_error');
+        }
+        function formRemoveError(input) {
+            input.parentElement.classList.remove('_error');
+            input.classList.remove('_error');
+        }
+        function numTest(input) {
+            return !/^[0-9]+$/.test(input.value);
+        }
+
     });
 </script>

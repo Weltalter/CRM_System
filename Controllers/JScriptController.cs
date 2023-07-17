@@ -38,31 +38,123 @@ namespace CRM_System.Controllers
         [HttpPost]
         public ActionResult AddOrder([FromBody] Order Order)
         {
-            Order newOrder = new Order()
+            bool isClientExists = DBObject.IsTableExist(_content, Order.clientID, 1);
+
+            if (isClientExists)
             {
-                clientID = Order.clientID,
-                desc = Order.desc,
-                orderDate = Order.orderDate,
-                price = Order.price
-            };
-            DBObject.AddOrder(_content, newOrder);
-            return Json(newOrder);
+                Order newOrder = new Order()
+                {
+                    clientID = Order.clientID,
+                    desc = Order.desc,
+                    orderDate = Order.orderDate,
+                    price = Order.price
+                };
+                DBObject.AddOrder(_content, newOrder);
+                return Json(newOrder);
+            }
+            else{
+                var errorResponse = new
+                {
+                    error = "Клиент с указанным ID не существует"
+                };
+                return BadRequest(errorResponse);
+            }
         }
 
         [HttpPost]
         public ActionResult RemoveOrder([FromBody] int OrderID)
         {
-            int RemoveOrderID = OrderID;
-            DBObject.RemoveOrder(_content, RemoveOrderID);
-            return Json(RemoveOrderID);
+            bool isOrderExists = DBObject.IsTableExist(_content, OrderID, 2);
+
+            if (isOrderExists)
+            {
+                int RemoveOrderID = OrderID;
+                DBObject.RemoveOrder(_content, RemoveOrderID);
+                return Json(RemoveOrderID);
+            }
+            else
+            {
+                var errorResponse = new
+                {
+                    error = "Заказ с указанным ID не существует"
+                };
+                return BadRequest(errorResponse);
+            }
         }
 
         [HttpPost]
         public ActionResult RemoveClient([FromBody] int ClientID)
         {
-            int RemoveClientID = ClientID;
-            DBObject.RemoveClient(_content, RemoveClientID);
-            return Json(RemoveClientID);
+            bool isClientExists = DBObject.IsTableExist(_content, ClientID, 1);
+
+            if (isClientExists)  {
+                int RemoveClientID = ClientID;
+                DBObject.RemoveClient(_content, RemoveClientID);
+                return Json(RemoveClientID);
+            }
+            else  {
+                var errorResponse = new
+                {
+                    error = "Клиент с указанным ID не существует"
+                };
+                return BadRequest(errorResponse);
+            }
+        }
+        [HttpPost]
+        public ActionResult ChangeClient([FromBody] Client Client)
+        {
+            Client newClient = new Client()
+            {
+                clientID = Client.clientID,
+                firstName = Client.firstName,
+                middleName = Client.middleName,
+                lastName = Client.lastName,
+                birthdate = Client.birthdate
+            };
+            bool isClientExists = DBObject.IsTableExist(_content, newClient.clientID, 1);
+
+            if (isClientExists)
+            {
+
+                DBObject.ChangeClient(_content, newClient);
+                return Json(newClient);
+            }
+            else
+            {
+                var errorResponse = new
+                {
+                    error = "Клиент с указанным ID не существует"
+                };
+                return BadRequest(errorResponse);
+            }
+        }
+        [HttpPost]
+        public ActionResult ChangeOrder([FromBody] Order Order)
+        {
+            Order newOrder = new Order()
+            {
+                orderID = Order.orderID,
+                clientID = Order.clientID,
+                desc = Order.desc,
+                orderDate = Order.orderDate,
+                price = Order.price
+            };
+            bool isOrderExists = DBObject.IsTableExist(_content, newOrder.orderID, 2);
+            bool isClientExists = DBObject.IsTableExist(_content, newOrder.clientID, 1);
+
+            if (isOrderExists&&isClientExists)
+            {
+                DBObject.ChangeOrder(_content, newOrder);
+                return Json(newOrder);
+            }
+            else
+            {
+                var errorResponse = new
+                {
+                    error = "Заказ или клиент с указанным ID не существует"
+                };
+                return BadRequest(errorResponse);
+            }
         }
     }
 }

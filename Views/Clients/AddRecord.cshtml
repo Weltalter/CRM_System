@@ -8,24 +8,24 @@
     </div>
     <div>
         <p>
-            <input Placeholder="Фамилия" tabindex="1" name="MiddleName" type="text" />
+            <input Placeholder="Фамилия" tabindex="1" name="MiddleName" type="text" class="form_input _req _name" />
         </p>
     </div>
     <div>
         <p>
-            <input Placeholder="Имя" tabindex="2" name="FirstName" type="text" />
+            <input Placeholder="Имя" tabindex="2" name="FirstName" type="text" class=" form_input _req _name" />
         </p>
     </div>
     <div>
         <p>
-            <input Placeholder="Отчество" tabindex="3" name="LastName" type="text" />
+            <input Placeholder="Отчество" tabindex="3" name="LastName" type="text" class="form_input _req _name" />
         </p>
     </div>
     <div style="font-weight: 700">
         Дата рождения
     </div>
     <div>
-        <input tabindex="4" name="BirthDate" type="date" />
+        <input tabindex="4" name="BirthDate" type="date" class="form_input _req" />
     </div>
     <div>
         <button tabindex="5" type="submit" style="float: left">Добавить</button>
@@ -63,21 +63,72 @@
             birthdate: birthDateScript
         };
 
-        fetch('/JScript/AddClient', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(client)
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Успешно добавлен клиент:');
-                console.log(data);
+        let error = formValidate(form);
+
+        if(error ===0){
+            fetch('/JScript/AddClient', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(client)
             })
-            .catch(error => {
-                console.log('Ошибка при добавлении клиента:');
-                console.error(error);
-            });
+                .then((response) => {
+                    if (!response.ok) {
+                        return response.json().then((error) => {
+                            throw new Error(error.error);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    alert('Клиент успешно добавлен')
+                    console.log('Клиент успешно добавлен:');
+                    console.log(data);
+                    form.reset();
+                })
+                .catch(error => {
+                    alert(error)
+                    console.log('Ошибка при добавлении клиента:');
+                    console.error(error);
+                });
+        } else{
+            alert('Заполните обязательные поля');
+        }
+
+        function formValidate(form){
+            let error = 0;
+            let formReq = document.querySelectorAll('._req');
+
+            for(let index = 0; index < formReq.length; index++){
+                    const input = formReq[index];
+                    formRemoveError(input);
+
+                    if(input.classList.contains('_name')){
+                        if (nameTest(input)){
+                            formAddError(input);
+                            error++;
+                        }
+                    } else{
+                        if (input.value === ''){
+                            formAddError(input);
+                            error++;
+                        }
+                    }
+            }
+            return error;
+        }
+
+        function formAddError(input){
+            input.parentElement.classList.add('_error');
+            input.classList.add('_error');
+        }
+        function formRemoveError(input) {
+            input.parentElement.classList.remove('_error');
+            input.classList.remove('_error');
+        }
+        function nameTest(input){
+            return !/^[a-zA-Zа-яА-ЯёЁ]+$/.test(input.value);
+        }
     });
 </script>

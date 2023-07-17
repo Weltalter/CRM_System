@@ -181,7 +181,9 @@ button:active {
 }
 
 
-
+.form_input._error {
+    box-shadow: 0 0 15px red;
+}
 
 
 
