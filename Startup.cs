@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CRM_System.Data.Repository;
+using CRM_System.Controllers;
 
 namespace CRM_System {
     public class Startup {
@@ -43,6 +44,7 @@ namespace CRM_System {
             using (var scope = app.ApplicationServices.CreateScope()) {
                 DBContent _content = scope.ServiceProvider.GetRequiredService<DBContent>();
                 DBObject.Initial(_content);
+                JScriptController JSController = new JScriptController(_content);
             }
         }
 

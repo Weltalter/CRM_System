@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fdn0cWuaA7U7NhRXYMR06IDn88EDxh3GjYvtEMK9Hck=",
+  "Hash": "ymKNK+vhaAJTpgiNCJu81DRq+SCTA5v2rS82eepj98c=",
   "Source": "CRM_System",
   "BasePath": "_content/CRM_System",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CRM_System\\wwwroot",
       "Source": "CRM_System",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\css\\StyleSheet.css",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\css\\StyleSheet.css",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "css/StyleSheet.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\1.png",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\img\\1.png",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "img/1.png",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\img\\1.png"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\2.png",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\img\\2.png",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "img/2.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\img\\2.png"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\Scripts.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\Scripts.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/Scripts.js",
       "AssetKind": "All",

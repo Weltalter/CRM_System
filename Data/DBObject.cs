@@ -45,23 +45,42 @@ namespace CRM_System.Data {
         }
 
         public static void AddClient (DBContent _content, Client _newClient) {
-            _clients.Add(_newClient.clientID.ToString() +
-                         _newClient.middleName[0].ToString() +
-                         _newClient.firstName[0].ToString() +
-                         _newClient.lastName[0].ToString(), _newClient);
+            //_clients.Add(_newClient.clientID.ToString() +
+            //             _newClient.middleName[0].ToString() +
+            //             _newClient.firstName[0].ToString() +
+            //             _newClient.lastName[0].ToString(), _newClient);
             _content.Client.Add(_newClient);
             _content.SaveChanges();
         }
         public static void AddOrder (DBContent _content, Order _newOrder) {
-            _orders.Add(_newOrder.orderID.ToString() +
-                        "--" +
-                        _newOrder.clientID.ToString() +
-                        "--" +
-                        _newOrder.orderDate.ToString(), _newOrder);
+            //_orders.Add(_newOrder.orderID.ToString() +
+            //            "--" +
+            //            _newOrder.clientID.ToString() +
+            //            "--" +
+            //            _newOrder.orderDate.ToString(), _newOrder);
             _content.Order.Add(_newOrder);
             _content.SaveChanges();
         }
+        public static void RemoveClient(DBContent _content, int RemoveClientID)
+        {
+            Client _removeClient = _content.Client
+               .Where(o => o.clientID == RemoveClientID)
+               .FirstOrDefault();
 
+
+            _content.Client.Remove(_removeClient);
+            _content.SaveChanges();
+        }
+        public static void RemoveOrder(DBContent _content, int RemoveOrderID)
+        {
+            Order _removeOrder = _content.Order
+               .Where(o => o.orderID == RemoveOrderID)
+               .FirstOrDefault();
+
+
+            _content.Order.Remove(_removeOrder);
+            _content.SaveChanges();
+        }
 
 
     }

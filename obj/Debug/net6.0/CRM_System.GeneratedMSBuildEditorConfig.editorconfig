@@ -9,73 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CRM_System
 build_property.RootNamespace = CRM_System
-build_property.ProjectDir = C:\Users\Роман\source\repos\Git\CRM_System\CRM_System\
+build_property.ProjectDir = C:\Users\Максим\Documents\GitHub\CRM_System\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Роман\source\repos\Git\CRM_System\CRM_System
+build_property.MSBuildProjectDirectory = C:\Users\Максим\Documents\GitHub\CRM_System
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Clients/AddRecord.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Clients/AddRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xBZGRSZWNvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Clients/ChangeRecord.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Clients/ChangeRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xDaGFuZ2VSZWNvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Clients/DeleteRecord.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Clients/DeleteRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xEZWxldGVSZWNvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Clients/List.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Clients/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Contacts/List.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Contacts/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdHNcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Home/Index.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Orders/AddRecord.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Orders/AddRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEFkZFJlY29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Orders/ChangeRecord.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Orders/ChangeRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENoYW5nZVJlY29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Orders/DeleteRecord.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Orders/DeleteRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZVJlY29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Orders/List.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Orders/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Shared/_Layout.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Shared/_SampleOutputClient.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Shared/_SampleOutputClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TYW1wbGVPdXRwdXRDbGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Shared/_SampleOutputContact.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Shared/_SampleOutputContact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TYW1wbGVPdXRwdXRDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/Shared/_SampleOutputOrder.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/Shared/_SampleOutputOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TYW1wbGVPdXRwdXRPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/_ViewImports.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Роман/source/repos/Git/CRM_System/CRM_System/Views/_ViewStart.cshtml]
+[C:/Users/Максим/Documents/GitHub/CRM_System/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

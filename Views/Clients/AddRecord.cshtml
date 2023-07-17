@@ -1,4 +1,4 @@
-﻿<form action="#" method="post" enctype="multipart/form-data">
+﻿<form action="#" id="AddClient" method="post" enctype="multipart/form-data">
     <div style="font-weight: 700;
                 font-size: 16px;
                 margin: 10px">
@@ -32,3 +32,52 @@
         <button tabindex="6" type="reset">Очистить</button>
     </div>
 </form>
+
+<script>
+
+    const form = document.getElementById('AddClient');
+
+    const middleNameInput = document.querySelector('input[name="MiddleName"]');
+    const firstNameInput = document.querySelector('input[name="FirstName"]');
+    const lastNameInput = document.querySelector('input[name="LastName"]');
+    const birthDateInput = document.querySelector('input[name="BirthDate"]');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const middleNameScript = middleNameInput.value;
+        const firstNameScript = firstNameInput.value;
+        const lastNameScript = lastNameInput.value;
+        const birthDateScript = birthDateInput.value;
+
+
+        console.log('Фамилия:', middleNameScript);
+        console.log('Имя:', firstNameScript);
+        console.log('Отчество:', lastNameScript);
+        console.log('Дата рождения:', birthDateScript);
+
+        const client = {
+            firstName: firstNameScript,
+            middleName: middleNameScript,
+            lastName: lastNameScript,
+            birthdate: birthDateScript
+        };
+
+        fetch('/JScript/AddClient', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(client)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Успешно добавлен клиент:');
+                console.log(data);
+            })
+            .catch(error => {
+                console.log('Ошибка при добавлении клиента:');
+                console.error(error);
+            });
+    });
+</script>
