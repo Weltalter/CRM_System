@@ -10,22 +10,17 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNetCore.Builder;
 
-namespace CRM_System.Controllers
-{
-    public class JScriptController : Controller
-    {
+namespace CRM_System.Controllers {
+    public class JScriptController : Controller {
         private DBContent _content;
 
-        public JScriptController(DBContent _content)
-        {
+        public JScriptController(DBContent _content) {
             this._content = _content;
         }
 
         [HttpPost]
-        public ActionResult AddClient([FromBody] Client Client)
-        {
-            Client newClient = new Client()
-            {
+        public ActionResult AddClient([FromBody] Client Client) {
+            Client newClient = new Client() {
                 firstName = Client.firstName,
                 middleName = Client.middleName,
                 lastName = Client.lastName,
@@ -36,14 +31,11 @@ namespace CRM_System.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddOrder([FromBody] Order Order)
-        {
+        public ActionResult AddOrder([FromBody] Order Order) {
             bool isClientExists = DBObject.IsTableExist(_content, Order.clientID, 1);
 
-            if (isClientExists)
-            {
-                Order newOrder = new Order()
-                {
+            if (isClientExists) {
+                Order newOrder = new Order() {
                     clientID = Order.clientID,
                     desc = Order.desc,
                     orderDate = Order.orderDate,
@@ -52,9 +44,8 @@ namespace CRM_System.Controllers
                 DBObject.AddOrder(_content, newOrder);
                 return Json(newOrder);
             }
-            else{
-                var errorResponse = new
-                {
+            else {
+                var errorResponse = new {
                     error = "Клиент с указанным ID не существует"
                 };
                 return BadRequest(errorResponse);
@@ -62,20 +53,16 @@ namespace CRM_System.Controllers
         }
 
         [HttpPost]
-        public ActionResult RemoveOrder([FromBody] int OrderID)
-        {
+        public ActionResult RemoveOrder([FromBody] int OrderID) {
             bool isOrderExists = DBObject.IsTableExist(_content, OrderID, 2);
 
-            if (isOrderExists)
-            {
+            if (isOrderExists) {
                 int RemoveOrderID = OrderID;
                 DBObject.RemoveOrder(_content, RemoveOrderID);
                 return Json(RemoveOrderID);
             }
-            else
-            {
-                var errorResponse = new
-                {
+            else {
+                var errorResponse = new {
                     error = "Заказ с указанным ID не существует"
                 };
                 return BadRequest(errorResponse);
@@ -83,28 +70,24 @@ namespace CRM_System.Controllers
         }
 
         [HttpPost]
-        public ActionResult RemoveClient([FromBody] int ClientID)
-        {
+        public ActionResult RemoveClient([FromBody] int ClientID) {
             bool isClientExists = DBObject.IsTableExist(_content, ClientID, 1);
 
-            if (isClientExists)  {
+            if (isClientExists) {
                 int RemoveClientID = ClientID;
                 DBObject.RemoveClient(_content, RemoveClientID);
                 return Json(RemoveClientID);
             }
-            else  {
-                var errorResponse = new
-                {
+            else {
+                var errorResponse = new {
                     error = "Клиент с указанным ID не существует"
                 };
                 return BadRequest(errorResponse);
             }
         }
         [HttpPost]
-        public ActionResult ChangeClient([FromBody] Client Client)
-        {
-            Client newClient = new Client()
-            {
+        public ActionResult ChangeClient([FromBody] Client Client) {
+            Client newClient = new Client() {
                 clientID = Client.clientID,
                 firstName = Client.firstName,
                 middleName = Client.middleName,
@@ -113,26 +96,21 @@ namespace CRM_System.Controllers
             };
             bool isClientExists = DBObject.IsTableExist(_content, newClient.clientID, 1);
 
-            if (isClientExists)
-            {
+            if (isClientExists) {
 
                 DBObject.ChangeClient(_content, newClient);
                 return Json(newClient);
             }
-            else
-            {
-                var errorResponse = new
-                {
+            else {
+                var errorResponse = new {
                     error = "Клиент с указанным ID не существует"
                 };
                 return BadRequest(errorResponse);
             }
         }
         [HttpPost]
-        public ActionResult ChangeOrder([FromBody] Order Order)
-        {
-            Order newOrder = new Order()
-            {
+        public ActionResult ChangeOrder([FromBody] Order Order) {
+            Order newOrder = new Order() {
                 orderID = Order.orderID,
                 clientID = Order.clientID,
                 desc = Order.desc,
@@ -142,19 +120,22 @@ namespace CRM_System.Controllers
             bool isOrderExists = DBObject.IsTableExist(_content, newOrder.orderID, 2);
             bool isClientExists = DBObject.IsTableExist(_content, newOrder.clientID, 1);
 
-            if (isOrderExists&&isClientExists)
-            {
+            if (isOrderExists && isClientExists) {
                 DBObject.ChangeOrder(_content, newOrder);
                 return Json(newOrder);
             }
-            else
-            {
-                var errorResponse = new
-                {
+            else {
+                var errorResponse = new {
                     error = "Заказ или клиент с указанным ID не существует"
                 };
                 return BadRequest(errorResponse);
             }
         }
+
+
+
+
+
+
     }
 }

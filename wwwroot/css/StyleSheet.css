@@ -123,9 +123,11 @@ button:active {
 button {
     background: #C3BEFE;
 }
+
 button:hover {
     background: #B6B1FC;
 }
+
 button:active {
     background: #9189FA;
 }
@@ -180,9 +182,8 @@ button:active {
     color: #fff;
 }
 
-
 .form_input._error {
-    box-shadow: 0 0 15px red;
+    border: 2px solid red;
 }
 
 
