@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\CRM_System.csproj": {}
+    "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\CRM_System.csproj": {
+    "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\CRM_System.csproj",
+        "projectUniqueName": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj",
         "projectName": "CRM_System",
-        "projectPath": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\CRM_System.csproj",
-        "packagesPath": "C:\\Users\\Максим\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\obj\\",
+        "projectPath": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\CRM_System.csproj",
+        "packagesPath": "C:\\Users\\Роман\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Максим\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Роман\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -109,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

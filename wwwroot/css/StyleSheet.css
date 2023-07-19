@@ -182,10 +182,11 @@ button:active {
     color: #fff;
 }
 
-.form_input._error {
-    border: 2px solid red;
+.form_input._error,
+.form_input._error:active {
+    border: 2px solid #D03F3E;
+    background-color: #FCE8E8;
 }
-
 
 
 
