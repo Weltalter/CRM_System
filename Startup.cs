@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CRM_System.Data.Repository;
+using CRM_System.Controllers;
 
 namespace CRM_System {
     public class Startup {
@@ -37,12 +38,13 @@ namespace CRM_System {
 
             app.UseRouting();
             app.UseEndpoints(endpoints => {
-                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
 
             using (var scope = app.ApplicationServices.CreateScope()) {
                 DBContent _content = scope.ServiceProvider.GetRequiredService<DBContent>();
                 DBObject.Initial(_content);
+                JScriptController JSController = new JScriptController(_content);
             }
         }
 

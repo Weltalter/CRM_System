@@ -1,0 +1,11 @@
+﻿<div style="background: #DFEFFB;
+            border: 1px solid grey;
+            height: max-content;
+            padding: 10px;">
+    @{
+        foreach (Contact Contact in Model.allContacts) {
+            @Html.Partial("_SampleOutputContact", Contact)
+            <hr>
+        }
+    }
+</div>

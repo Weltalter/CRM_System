@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace CRM_System.ViewModels {
-    public class OrdersListViewModel {
+    public class OrdersViewModel {
         public IEnumerable<Order> allOrders { set; get; }
     }
 }

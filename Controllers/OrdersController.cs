@@ -16,11 +16,25 @@ namespace CRM_System.Controllers {
 
         public ViewResult List() {
             ViewBag.Title = "Заказы";
-            OrdersListViewModel obj = new OrdersListViewModel();
+            OrdersViewModel obj = new OrdersViewModel();
             obj.allOrders = _allOrders.Orders;
             return View(obj);
         }
+        public ViewResult AddRecord() {
+            ViewBag.Title = "Добавить заказ";
 
+            return View();
+        }
+        public ViewResult ChangeRecord() {
+            ViewBag.Title = "Изменить заказ";
+
+            return View();
+        }
+        public ViewResult DeleteRecord() {
+            ViewBag.Title = "Удалить заказ";
+
+            return View();
+        }
 
     }
 }
