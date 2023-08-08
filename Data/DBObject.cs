@@ -8,50 +8,37 @@ using System.Linq;
 
 namespace CRM_System.Data {
     public class DBObject {
-        public static void Initial (DBContent _content) {
+        public static void Initial(DBContent _content) {
             if (!_content.Client.Any()) {
-                _content.Client.AddRange(Clients.Values);
+                _content.Client.Add(new Client {
+                                    firstName = "Роман",
+                                    middleName = "Крылов",
+                                    lastName = "Алексеевич",
+                                    birthdate = DateTime.Now });
             }
 
             if (!_content.Order.Any()) {
-                _content.Order.AddRange(Orders.Values);
+                _content.Order.Add(new Order {
+                                   clientID = 1,
+                                   clientInfo = "Крылов Роман Алексеевич",
+                                   desc = "Тестовый заказ",
+                                   orderDate = DateTime.Now,
+                                   price = 1 });
             }
 
             _content.SaveChanges();
         }
 
-        private static Dictionary<string, Client> _clients;
-        public static Dictionary<string, Client> Clients {
-            get {
-                if (_clients == null) {
-                    _clients = new Dictionary<string, Client> {
-                        { "Администратор", new Client { firstName = "Роман", middleName = "Крылов", lastName = "Алексеевич", birthdate = DateTime.Now } }
-                    };
-                }
-                return _clients;
-            }
-        }
-
-        private static Dictionary<string, Order> _orders;
-        public static Dictionary<string, Order> Orders {
-            get {
-                if (_orders == null) {
-                    _orders = new Dictionary<string, Order> {
-                        { "Заказ 001", new Order { clientID = 1, desc = "Тестовый заказ", orderDate = DateTime.Now, price = 1 } }
-                    };
-                }
-                return _orders;
-            }
-        }
-
-        public static void AddClient (DBContent _content, Client _newClient) {
+        public static void AddClient(DBContent _content, Client _newClient) {
             _content.Client.Add(_newClient);
             _content.SaveChanges();
         }
-        public static void AddOrder (DBContent _content, Order _newOrder) {
+        public static void AddOrder(DBContent _content, Order _newOrder) {
             _content.Order.Add(_newOrder);
             _content.SaveChanges();
         }
+
+
         public static void RemoveClient(DBContent _content, int RemoveClientID) {
             Client _removeClient = _content.Client
                .Where(o => o.clientID == RemoveClientID)
@@ -70,16 +57,18 @@ namespace CRM_System.Data {
             _content.Order.Remove(_removeOrder);
             _content.SaveChanges();
         }
+
+
         public static void ChangeClient(DBContent _content, Client _newClient) {
             Client _changeClient = _content.Client
                .Where(o => o.clientID == _newClient.clientID)
                .FirstOrDefault();
 
             if (_changeClient != null) {
-                    _changeClient.firstName = _newClient.firstName;
-                    _changeClient.middleName = _newClient.middleName;
-                    _changeClient.lastName = _newClient.lastName;
-                    _changeClient.birthdate = _newClient.birthdate;        
+                _changeClient.firstName = _newClient.firstName;
+                _changeClient.middleName = _newClient.middleName;
+                _changeClient.lastName = _newClient.lastName;
+                _changeClient.birthdate = _newClient.birthdate;
             }
             _content.SaveChanges();
         }
@@ -88,7 +77,7 @@ namespace CRM_System.Data {
                .Where(o => o.orderID == _newOrder.orderID)
                .FirstOrDefault();
 
-            if (_changeOrder != null) {     
+            if (_changeOrder != null) {
                 _changeOrder.clientID = _newOrder.clientID;
                 _changeOrder.desc = _newOrder.desc;
                 _changeOrder.orderDate = _newOrder.orderDate;
@@ -97,6 +86,7 @@ namespace CRM_System.Data {
 
             _content.SaveChanges();
         }
+
 
         public static bool IsTableExist(DBContent _content, int Id, int Table) {
             //Table:1 - клиента
@@ -113,3 +103,5 @@ namespace CRM_System.Data {
         }
     }
 }
+
+

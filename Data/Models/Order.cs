@@ -7,6 +7,7 @@ namespace CRM_System.Data.Models {
     public class Order {
         public int orderID { set; get; }
         public int clientID { set; get; }
+        public string clientInfo { set; get; }
         public string desc { set; get; }
         public DateTime orderDate { set; get; }
         public ushort price { set; get; }

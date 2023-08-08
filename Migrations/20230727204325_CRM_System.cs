@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CRM_System.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class CRM_System : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,6 +34,7 @@ namespace CRM_System.Migrations
                     orderID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     clientID = table.Column<int>(type: "int", nullable: false),
+                    clientInfo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     desc = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     orderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     price = table.Column<int>(type: "int", nullable: false)
@@ -41,28 +42,17 @@ namespace CRM_System.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Order", x => x.orderID);
-                    table.ForeignKey(
-                        name: "FK_Order_Client_clientID",
-                        column: x => x.clientID,
-                        principalTable: "Client",
-                        principalColumn: "clientID",
-                        onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Order_clientID",
-                table: "Order",
-                column: "clientID");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Order");
+                name: "Client");
 
             migrationBuilder.DropTable(
-                name: "Client");
+                name: "Order");
         }
     }
 }

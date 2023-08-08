@@ -58,6 +58,9 @@ namespace CRM_System.Migrations
                     b.Property<int>("clientID")
                         .HasColumnType("int");
 
+                    b.Property<string>("clientInfo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("desc")
                         .HasColumnType("nvarchar(max)");
 
@@ -69,23 +72,7 @@ namespace CRM_System.Migrations
 
                     b.HasKey("orderID");
 
-                    b.HasIndex("clientID");
-
                     b.ToTable("Order");
-                });
-
-            modelBuilder.Entity("CRM_System.Data.Models.Order", b =>
-                {
-                    b.HasOne("CRM_System.Data.Models.Client", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("clientID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CRM_System.Data.Models.Client", b =>
-                {
-                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

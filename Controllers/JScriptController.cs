@@ -29,18 +29,21 @@ namespace CRM_System.Controllers {
             DBObject.AddClient(_content, newClient);
             return Json(newClient);
         }
-
         [HttpPost]
         public ActionResult AddOrder([FromBody] Order Order) {
             bool isClientExists = DBObject.IsTableExist(_content, Order.clientID, 1);
 
             if (isClientExists) {
+                Client tmp = (from c in _content.Client where c.clientID == Order.clientID select c).First();
+
                 Order newOrder = new Order() {
                     clientID = Order.clientID,
+                    clientInfo = tmp.middleName.ToString() + " " + tmp.firstName.ToString() + " " + tmp.lastName.ToString(),
                     desc = Order.desc,
                     orderDate = Order.orderDate,
                     price = Order.price
                 };
+
                 DBObject.AddOrder(_content, newOrder);
                 return Json(newOrder);
             }
@@ -51,7 +54,6 @@ namespace CRM_System.Controllers {
                 return BadRequest(errorResponse);
             }
         }
-
         [HttpPost]
         public ActionResult RemoveOrder([FromBody] int OrderID) {
             bool isOrderExists = DBObject.IsTableExist(_content, OrderID, 2);
@@ -110,17 +112,21 @@ namespace CRM_System.Controllers {
         }
         [HttpPost]
         public ActionResult ChangeOrder([FromBody] Order Order) {
-            Order newOrder = new Order() {
-                orderID = Order.orderID,
-                clientID = Order.clientID,
-                desc = Order.desc,
-                orderDate = Order.orderDate,
-                price = Order.price
-            };
-            bool isOrderExists = DBObject.IsTableExist(_content, newOrder.orderID, 2);
-            bool isClientExists = DBObject.IsTableExist(_content, newOrder.clientID, 1);
+            bool isOrderExists = DBObject.IsTableExist(_content, Order.orderID, 2);
+            bool isClientExists = DBObject.IsTableExist(_content, Order.clientID, 1);
 
             if (isOrderExists && isClientExists) {
+                Client tmp = (from c in _content.Client where c.clientID == Order.clientID select c).First();
+
+                Order newOrder = new Order() {
+                    orderID = Order.orderID,
+                    clientID = Order.clientID,
+                    clientInfo = tmp.middleName.ToString() + " " + tmp.firstName.ToString() + " " + tmp.lastName.ToString(),
+                    desc = Order.desc,
+                    orderDate = Order.orderDate,
+                    price = Order.price
+                };
+
                 DBObject.ChangeOrder(_content, newOrder);
                 return Json(newOrder);
             }
@@ -131,7 +137,6 @@ namespace CRM_System.Controllers {
                 return BadRequest(errorResponse);
             }
         }
-
 
 
 

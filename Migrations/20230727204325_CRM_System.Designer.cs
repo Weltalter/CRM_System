@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRM_System.Migrations
 {
     [DbContext(typeof(DBContent))]
-    [Migration("20230713223456_Initial")]
-    partial class Initial
+    [Migration("20230727204325_CRM_System")]
+    partial class CRM_System
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,6 +61,9 @@ namespace CRM_System.Migrations
                     b.Property<int>("clientID")
                         .HasColumnType("int");
 
+                    b.Property<string>("clientInfo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("desc")
                         .HasColumnType("nvarchar(max)");
 
@@ -72,23 +75,7 @@ namespace CRM_System.Migrations
 
                     b.HasKey("orderID");
 
-                    b.HasIndex("clientID");
-
                     b.ToTable("Order");
-                });
-
-            modelBuilder.Entity("CRM_System.Data.Models.Order", b =>
-                {
-                    b.HasOne("CRM_System.Data.Models.Client", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("clientID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CRM_System.Data.Models.Client", b =>
-                {
-                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }
