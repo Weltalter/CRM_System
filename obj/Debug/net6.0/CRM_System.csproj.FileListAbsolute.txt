@@ -367,3 +367,4 @@ C:\Users\Максим\Documents\GitHub\CRM_System\obj\Debug\net6.0\refint\CRM_Sy
 C:\Users\Максим\Documents\GitHub\CRM_System\obj\Debug\net6.0\CRM_System.pdb
 C:\Users\Максим\Documents\GitHub\CRM_System\obj\Debug\net6.0\CRM_System.genruntimeconfig.cache
 C:\Users\Максим\Documents\GitHub\CRM_System\obj\Debug\net6.0\ref\CRM_System.dll
+C:\Users\Максим\Documents\GitHub\CRM_System\bin\Debug\net6.0\launchSettings.json

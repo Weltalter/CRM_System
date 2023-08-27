@@ -1,43 +1,43 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\css\\StyleSheet.css",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\css\\StyleSheet.css",
       "PackagePath": "staticwebassets\\css\\StyleSheet.css"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\1.png",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\img\\1.png",
       "PackagePath": "staticwebassets\\img\\1.png"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\2.png",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\img\\2.png",
       "PackagePath": "staticwebassets\\img\\2.png"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Client_AddRecord.js",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Client_AddRecord.js",
       "PackagePath": "staticwebassets\\js\\JSS_Client_AddRecord.js"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Client_ChangeRecord.js",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Client_ChangeRecord.js",
       "PackagePath": "staticwebassets\\js\\JSS_Client_ChangeRecord.js"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Client_DeleteRecord.js",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Client_DeleteRecord.js",
       "PackagePath": "staticwebassets\\js\\JSS_Client_DeleteRecord.js"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_DateTime.js",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_DateTime.js",
       "PackagePath": "staticwebassets\\js\\JSS_DateTime.js"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Order_AddRecord.js",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Order_AddRecord.js",
       "PackagePath": "staticwebassets\\js\\JSS_Order_AddRecord.js"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Order_ChangeRecord.js",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Order_ChangeRecord.js",
       "PackagePath": "staticwebassets\\js\\JSS_Order_ChangeRecord.js"
     },
     {
-      "Id": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Order_DeleteRecord.js",
+      "Id": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Order_DeleteRecord.js",
       "PackagePath": "staticwebassets\\js\\JSS_Order_DeleteRecord.js"
     },
     {

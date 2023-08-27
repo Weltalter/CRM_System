@@ -1,0 +1,62 @@
+name: dockercompose15131754523389771973
+services:
+  crm_system:
+    build:
+      context: C:\Users\Максим\Documents\GitHub\CRM_System
+      dockerfile: Dockerfile
+    container_name: crm_system_services
+    depends_on:
+      crm_systemdb:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: crmsystem
+    networks:
+      crm_system_network: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "7122"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Максим\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Максим\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  crm_systemdb:
+    build:
+      context: C:\Users\Максим\Documents\GitHub\CRM_System
+      dockerfile: Data\Dockerfile
+    container_name: crm_systemdb_services
+    image: crm_systemdb_image
+    networks:
+      crm_system_network: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1433"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: mssqldata
+      target: /var/opt/mssql
+      volume: {}
+networks:
+  crm_system_network:
+    name: dockercompose15131754523389771973_crm_system_network
+volumes:
+  mssqldata:
+    name: dockercompose15131754523389771973_mssqldata

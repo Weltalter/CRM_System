@@ -1,0 +1,32 @@
+version: '3.4'
+networks:
+ crm_system_network:
+
+services:
+  crm_systemdb:
+    container_name: crm_systemdb_services
+    image: crm_systemdb_image
+    build: 
+      context: .
+      dockerfile: Data\Dockerfile
+    ports: 
+      - 1433:1433
+    networks:
+      - crm_system_network
+    volumes:
+      - mssqldata:/var/opt/mssql
+  crm_system:
+    container_name: crm_system_services
+    image: ${DOCKER_REGISTRY-}crmsystem
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80"
+      - "7122:443"
+    depends_on: 
+      - crm_systemdb
+    networks:
+      - crm_system_network
+volumes:
+  mssqldata:

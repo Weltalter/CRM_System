@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+RIP2+OV3geq+1zNBaR9X/AJ2wTFnDlO+PK1Yi4BABQ=",
+  "Hash": "U2zzFORgaq+1/egFEEQmCRj6ATDXoolnpelXRrwVqhg=",
   "Source": "CRM_System",
   "BasePath": "_content/CRM_System",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CRM_System\\wwwroot",
       "Source": "CRM_System",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\css\\StyleSheet.css",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\css\\StyleSheet.css",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "css/StyleSheet.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\1.png",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\img\\1.png",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "img/1.png",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\img\\1.png"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\img\\2.png",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\img\\2.png",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "img/2.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\img\\2.png"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Client_AddRecord.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Client_AddRecord.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/JSS_Client_AddRecord.js",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JSS_Client_AddRecord.js"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Client_ChangeRecord.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Client_ChangeRecord.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/JSS_Client_ChangeRecord.js",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JSS_Client_ChangeRecord.js"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Client_DeleteRecord.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Client_DeleteRecord.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/JSS_Client_DeleteRecord.js",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JSS_Client_DeleteRecord.js"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_DateTime.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_DateTime.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/JSS_DateTime.js",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JSS_DateTime.js"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Order_AddRecord.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Order_AddRecord.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/JSS_Order_AddRecord.js",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JSS_Order_AddRecord.js"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Order_ChangeRecord.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Order_ChangeRecord.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/JSS_Order_ChangeRecord.js",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JSS_Order_ChangeRecord.js"
     },
     {
-      "Identity": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\js\\JSS_Order_DeleteRecord.js",
+      "Identity": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\js\\JSS_Order_DeleteRecord.js",
       "SourceId": "CRM_System",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Роман\\source\\repos\\Git\\CRM_System\\CRM_System\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Максим\\Documents\\GitHub\\CRM_System\\wwwroot\\",
       "BasePath": "_content/CRM_System",
       "RelativePath": "js/JSS_Order_DeleteRecord.js",
       "AssetKind": "All",
